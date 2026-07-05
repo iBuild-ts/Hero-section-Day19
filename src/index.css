@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  --color-neon-orange: #ff5500;
+  --color-orange-glow: rgba(255, 85, 0, 0.15);
+}
+
+/* Custom styles for luxurious look */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Lenis smooth scrolling requirement */
+html.lenis {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+/* Smooth background transitions for theme-toggle */
+.theme-transition {
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom dark/light styles */
+.dark {
+  background-color: #050505;
+  color: #f5f5f5;
+}
+
+.light {
+  background-color: #fafafa;
+  color: #121212;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--color-neon-orange);
+  color: white;
+}
+
+/* Premium radial gradient overlay */
+.bg-radial-shadow {
+  background: radial-gradient(circle at center, transparent 30%, rgba(5, 5, 5, 0.8) 100%);
+}
+
+.bg-radial-shadow-light {
+  background: radial-gradient(circle at center, transparent 30%, rgba(250, 250, 250, 0.8) 100%);
+}
+
+/* Neon glow classes */
+.glow-neon {
+  box-shadow: 0 0 20px rgba(255, 85, 0, 0.3);
+}
+
+/* Dot matrix grids */
+.dot-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 0.8px, transparent 0.8px);
+  background-size: 32px 32px;
+}
+
+.dot-grid-light {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 0.8px, transparent 0.8px);
+  background-size: 32px 32px;
+}
+
+/* Hide scrollbar for standard premium experience while maintaining scroll */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5);
+}
+

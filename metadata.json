@@ -1,0 +1,6 @@
+{
+  "name": "Brim Coffee",
+  "description": "An ultra-premium, interactive single-page scroll showcase featuring Apple-style fluid scroll-driven coffee product rotation and premium typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
